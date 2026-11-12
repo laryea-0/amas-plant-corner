@@ -1,148 +1,119 @@
-/* Ama's Plant Corner - Website Styles */
+:root {
+  --bg: #efeeea;
+  --forest-green: #073f34;
+  --sage-green: #78936b;
+  --terracatta: #c58b61;
+  --clay: #a16e51;
+  --dark-text: #373b32;
+  --cream: #f4f0e5;
+  --serif: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  --sans: "Helvetica Neue", Arial, system-ui, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #e8e8e8;
   margin: 0;
-  padding: 0;
-  font-size: 14px;
+  min-height: 100%;
+  font-family: var(--sans);
+  color: var(--dark-text);
+  background-color: var(--bg);
 }
 
-#header {
-  background-color: #0066cc;
-  color: white;
-  padding: 10px 20px;
-  width: 900px;
-  margin: 0 auto;
-  overflow: hidden;
+.site-nav {
+  position: fixed;
+  z-index: 1000;
+  top: 0.75rem;
+  left: 0.75rem;
+  right: 0.75rem;
+  min-height: 3.5rem;
+  background-color: rgba(10, 10, 10, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 999px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.45rem 0.5rem 0.45rem 0.7rem;
 }
 
-#logo {
-  float: left;
-  font-size: 22px;
-  padding: 5px 0;
-}
-
-#nav {
-  float: right;
-  padding-top: 8px;
-}
-
-#nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#nav ul li {
-  display: inline;
-  margin-left: 20px;
-}
-
-#nav ul li a {
-  color: white;
+.logo {
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  font-size: 18px;
+  color: var(--clay);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
-div#header div#nav ul li a:hover {
-  color: red !important;
+.logo:hover,
+.logo:focus-visible {
+  color: var(--terracatta);
 }
 
-#banner {
-  background-color: #009900;
-  color: white;
-  text-align: center;
-  padding: 30px 20px;
-  width: 900px;
-  margin: 0 auto;
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(74, 79, 72, 0.3);
+  border-radius: 100%;
+  margin-right: 0.5rem;
 }
 
-#banner h1 {
-  font-size: 31px;
-  margin-bottom: 8px;
+.logo-icon {
+  width: 24px;
+  height: 24px;
 }
 
-#banner p {
-  font-size: 13px;
-  margin-bottom: 15px;
-}
-
-.btn {
-  background-color: #ff6600;
-  color: white;
-  padding: 8px 22px;
+.nav-links a {
   text-decoration: none;
-  font-size: 13px;
+  display: none;
+  color: var(--clay);
+  margin-left: 1rem;
+  font-weight: bold;
 }
 
-.btn:hover {
-  background-color: #cc5500;
-}
+@media (min-width: 768px) {
+  .site-nav {
+    top: 1.25rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    min-height: 4rem;
+    border-radius: 1.25rem;
+    padding: 0.65rem 1.25rem;
+  }
 
-#content {
-  width: 900px;
-  margin: 0 auto;
-  background-color: white;
-  padding: 20px;
-  overflow: hidden;
-}
+  .logo {
+    font-size: 1rem;
+  }
 
-#main {
-  float: left;
-  width: 610px;
-}
+  .nav-links a {
+    display: inline-block;
+    color: var(--clay);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-left: 1.5rem;
+    text-decoration: none;
+  }
 
-#sidebar {
-  float: right;
-  width: 240px;
-  background-color: #f0f0f0;
-  padding: 10px 15px;
-}
+  .nav-links a:hover,
+  .nav-links a:focus-visible {
+    color: var(--terracatta);
+  }
 
-h4 {
-  font-size: 16px;
-  color: #0066cc;
-  border-bottom: 1px solid #cccccc;
-  padding-bottom: 4px;
-  margin-top: 25px;
-  margin-bottom: 5px;
-}
-
-.products {
-  overflow: hidden;
-  margin: 15px 0;
-}
-
-.product-item {
-  float: left;
-  width: 190px;
-  margin-right: 20px;
-  text-align: center;
-  font-size: 11px;
-  line-height: 1.8;
-}
-
-.product-item img {
-  display: block;
-  margin: 0 auto;
-  background-color: #cccccc;
-}
-
-a {
-  color: #0066cc;
-}
-
-#sidebar a {
-  color: #009900;
-}
-
-#footer {
-  background-color: #333333;
-  color: #cccccc;
-  text-align: center;
-  padding: 12px;
-  font-size: 11px;
-  width: 900px;
-  margin: 0 auto;
+  .menu-toggle {
+    display: none;
+  }
 }
