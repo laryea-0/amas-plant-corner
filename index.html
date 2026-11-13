@@ -267,6 +267,81 @@
           Not sure what your plant needs? Ask Ama
         </a>
       </section>
+
+      <section
+        class="connect-section"
+        id="visit"
+        aria-labelledby="connect-heading"
+      >
+        <div class="connect-intro">
+          <p class="eyebrow">No question is too small</p>
+          <h2 id="connect-heading">Ask Ama.</h2>
+          <p>
+            Send a question before you visit, or come by the shop and tell me
+            what your plant is doing. We'll figure it out together.
+          </p>
+        </div>
+
+        <div class="connect-layout">
+          <form class="ask-form" action="#" method="post">
+            <div class="field-row">
+              <label for="ask-name">Your name</label>
+              <input
+                id="ask-name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                placeholder="What can Ama call you?"
+                required
+              />
+            </div>
+            <div class="field-row">
+              <label for="ask-topic">What do you need help with?</label>
+              <select id="ask-topic" name="topic">
+                <option value="">Choose a topic</option>
+                <option value="light">Finding the right light</option>
+                <option value="watering">Watering worries</option>
+                <option value="new-plant">Choosing a first plant</option>
+                <option value="other">Something else</option>
+              </select>
+            </div>
+            <div class="field-row">
+              <label for="ask-question">Your question</label>
+              <textarea
+                id="ask-question"
+                name="question"
+                rows="4"
+                placeholder="Tell me what's going on..."
+                required
+              ></textarea>
+            </div>
+            <button class="ask-button" type="submit">
+              Send to Ama
+            </button>
+          </form>
+
+          <aside class="contact-card" aria-labelledby="contact-heading">
+            <div class="contact-card-top">
+              <p class="eyebrow">Get in touch</p>
+              <h3 id="contact-heading">Find your<br />plant people.</h3>
+            </div>
+            <address>
+              <strong>14 Okaishie Lane</strong>
+              Accra, Ghana
+            </address>
+            <div class="contact-hours">
+              <p><strong>Mon - Sat</strong><span>8:00am - 6:00pm</span></p>
+              <p><strong>Sunday</strong><span>Closed</span></p>
+            </div>
+            <div class="contact-links">
+              <a href="tel:+233244000000">0244 000 000</a>
+              <a href="mailto:hello@amasplantcorner.com"
+                >hello@amasplantcorner.com</a
+              >
+            </div>
+          </aside>
+        </div>
+      </section>
     </main>
     <footer></footer>
   </body>

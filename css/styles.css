@@ -635,7 +635,9 @@ h1 em {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1;
-  transition: transform 180ms ease, background-color 180ms ease;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease;
 }
 
 .care-tip[open] .tip-icon {
@@ -667,6 +669,207 @@ h1 em {
 
 .care-link span {
   font-size: 1rem;
+}
+
+.connect-section {
+  padding: 4.5rem 1.25rem 5rem;
+  background: #f1eee6;
+  color: var(--forest-green);
+}
+
+.connect-intro {
+  max-width: 29rem;
+}
+
+.connect-intro .eyebrow {
+  margin-bottom: 0.9rem;
+  color: var(--clay);
+}
+
+.connect-intro h2 {
+  font-family: var(--serif);
+  font-size: clamp(3.2rem, 16vw, 6.5rem);
+  font-weight: 400;
+  letter-spacing: -0.08em;
+  line-height: 0.85;
+}
+
+.connect-intro > p:last-child {
+  max-width: 25rem;
+  margin-top: 1rem;
+  color: #657266;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.connect-layout {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.ask-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.field-row {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.field-row label {
+  color: var(--forest-green);
+  font-size: 0.73rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.field-row input,
+.field-row select,
+.field-row textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(41, 76, 56, 0.3);
+  border-radius: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--forest-green);
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.55rem 0;
+}
+
+.field-row textarea {
+  resize: vertical;
+}
+
+.field-row input::placeholder,
+.field-row textarea::placeholder {
+  color: #9a9e94;
+}
+
+.field-row input:focus,
+.field-row select:focus,
+.field-row textarea:focus {
+  border-color: #294c38;
+  box-shadow: 0 1px 0 #294c38;
+}
+
+.ask-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.95rem 1.1rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--forest-green);
+  color: var(--cream);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  transition: all 200ms ease-in-out;
+}
+
+.ask-button:hover,
+.ask-button:focus-visible {
+  background-color: var(--terracatta);
+  outline: none;
+}
+
+.ask-button span {
+  font-size: 1.1rem;
+}
+
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem;
+  border-radius: 1.4rem;
+  background: var(--forest-green);
+  color: var(--cream);
+}
+
+.contact-card::after {
+  position: absolute;
+  right: -3rem;
+  bottom: -5rem;
+  width: 12rem;
+  height: 12rem;
+  border: 1px solid rgba(169, 216, 189, 0.25);
+  border-radius: 50%;
+  content: "";
+}
+
+.contact-card .eyebrow {
+  margin-bottom: 0.9rem;
+  color: #a9d8bd;
+}
+
+.contact-card h3 {
+  color: var(--cream);
+  font-family: var(--serif);
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+.contact-card address {
+  display: grid;
+  gap: 0.25rem;
+  margin-top: 2.5rem;
+  color: #b6d2c0;
+  font-size: 0.86rem;
+  font-style: normal;
+  line-height: 1.5;
+}
+
+.contact-card address strong {
+  color: var(--cream);
+}
+
+.contact-hours {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(169, 216, 189, 0.25);
+}
+
+.contact-hours p {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #b6d2c0;
+  font-size: 0.78rem;
+}
+
+.contact-hours strong {
+  color: var(--cream);
+}
+
+.contact-links {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.contact-links a {
+  color: #b6f99b;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-underline-offset: 0.25rem;
+}
+
+.contact-links a:hover,
+.contact-links a:focus-visible {
+  color: var(--sage-green);
 }
 
 @media (min-width: 768px) {
@@ -801,4 +1004,19 @@ h1 em {
     margin-top: 4rem;
   }
 
+  .connect-section {
+    padding: 8rem 6vw;
+  }
+
+  .connect-layout {
+    grid-template-columns: minmax(20rem, 1fr) minmax(17rem, 0.75fr);
+    align-items: start;
+    gap: 8vw;
+    margin-top: 4rem;
+  }
+
+  .contact-card {
+    margin-top: -3rem;
+    padding: 2rem;
+  }
 }
