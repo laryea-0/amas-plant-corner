@@ -256,6 +256,194 @@ h1 em {
   color: #e7b28f;
 }
 
+.shop-section {
+  position: relative;
+  overflow: hidden;
+  padding: 4.5rem 1.25rem 1.25rem;
+  background: #073f34;
+}
+
+.shop-hero {
+  position: relative;
+  min-height: 31rem;
+}
+
+.shop-intro .eyebrow {
+  margin-bottom: 1.1rem;
+  color: #a9d8bd;
+}
+
+.shop-intro {
+  position: relative;
+  z-index: 2;
+  max-width: 19rem;
+}
+
+.shop-intro h2 {
+  max-width: 12ch;
+  color: #eff8dd;
+  font-family: var(--serif);
+  font-size: clamp(2.6rem, 12vw, 5.2rem);
+  font-weight: 400;
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+}
+
+.shop-intro h2 strong {
+  color: var(--sage-green);
+  font-weight: 700;
+}
+
+.shop-intro > p:not(.eyebrow) {
+  max-width: 24rem;
+  margin-top: 1.25rem;
+  color: #b6d2c0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.shop-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+  background: var(--sage-green);
+  color: var(--forest-green);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 180ms ease;
+}
+
+.shop-cta:hover,
+.shop-cta:focus-visible {
+  background: var(--terracatta);
+  transform: translateY(-2px);
+}
+
+.shop-cta span {
+  font-size: 1rem;
+}
+
+.shop-art {
+  position: absolute;
+  right: -5.5rem;
+  bottom: -1rem;
+  width: 21rem;
+  height: 22rem;
+}
+
+.shop-art img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.product-grid {
+  display: grid;
+  grid-auto-columns: minmax(15.5rem, 100%);
+  grid-auto-flow: row;
+  gap: 0.75rem;
+  overflow-x: auto;
+  padding: 0.5rem 0 1.25rem;
+  scrollbar-width: none;
+}
+
+.product-card {
+  width: 100%;
+  max-width: 270px;
+  padding: 10px;
+  border-radius: 26px;
+  background: rgba(16, 16, 16, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-7px);
+}
+
+.product-thumb {
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 19px;
+}
+
+.product-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-card-content {
+  margin-top: 9px;
+  padding: 17px 14px 13px;
+  border-radius: 18px;
+  background: rgba(15, 14, 14, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  font-size: 0.7rem;
+}
+
+.product-card-content > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.product-card h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: -0.7px;
+}
+
+.product-card p {
+  color: #6e7d70;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.product-price {
+  color: var(--sage-green);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.product-card a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 999px;
+  background: var(--sage-green);
+  color: var(--forest-green);
+  font-size: 0.82rem;
+  border: none;
+  margin-top: 0.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 180ms ease;
+  outline: none;
+}
+
+.product-card a:hover,
+.product-card a:focus-visible {
+  background: var(--terracatta);
+}
+
 @media (min-width: 768px) {
   .site-nav {
     top: 1.25rem;
@@ -290,5 +478,46 @@ h1 em {
 
   .hero-content {
     padding: 9rem 6vw 6rem;
+  }
+
+  .shop-section {
+    padding: 7rem 6vw 2rem;
+  }
+
+  .shop-hero {
+    min-height: 35rem;
+  }
+
+  .shop-intro {
+    max-width: 30rem;
+    padding-top: 2rem;
+  }
+
+  .shop-art {
+    right: 2vw;
+    bottom: -2rem;
+    width: min(44vw, 36rem);
+    height: 38rem;
+  }
+
+  .product-card {
+    grid-template-columns: 7rem 1fr;
+    min-height: 8.75rem;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: unset;
+    grid-auto-flow: unset;
+    gap: 1.25rem;
+    margin-top: -2rem;
+    overflow: visible;
+    padding-bottom: 1.25rem;
+    max-width: 70%;
+  }
+
+  .product-card {
+    grid-template-columns: 7rem 1fr;
+    min-height: 8.75rem;
   }
 }
