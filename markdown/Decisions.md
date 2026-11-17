@@ -18,15 +18,15 @@ grids rather than changing into a separate desktop experience.
 - **Deep green (`#073f34`, `#294c38`)** anchors the hero, product section,
   contact card, and footer. It connects the interface to plants and soil while
   giving Ama's advice a trustworthy, grounded feel.
-- **Soft leaf green (`#dce8d1`, `#b6f99b`, `#d7f0c4`)** provides contrast and
+- **Soft leaf green (`#dce8d1`, `#b6f99b`)** provides contrast and
   highlights important actions without using a loud, retail-heavy colour.
 - **Warm paper (`#f1eee6`, `#e8dfd1`)** separates the About and contact
   sections from the darker plant areas. It keeps the page calm and gives long
   text comfortable backgrounds.
-- **Terracotta (`#a16e51`, `#d75832`, `#e7b28f`)** is used sparingly for
+- **Terracotta (`#a16e51`)** is used sparingly for
   accents, labels, and emphasis. It brings in the warmth of pots, clay, and
   Accra's earthy character without competing with the green.
-- **Off-white/cream (`#eff8dd`, `#eef4e4`)** is used instead of pure white on dark
+- **Off-white/cream (`#eff8dd`)** is used instead of pure white on dark
   sections. It is softer, maintains strong contrast, and fits the relaxed
   visual tone.
 
@@ -45,7 +45,7 @@ over-designed.
 
 ## Layout choices
 
-- The **hero** uses the existing shop video, a full-surface green overlay, and
+- The **hero** uses a gardening video, a full-surface green overlay, and
   a short local message so visitors immediately understand the shop's tone and
   purpose.
 - The **navigation** is a glassmorphism pill on mobile, where space is limited,
