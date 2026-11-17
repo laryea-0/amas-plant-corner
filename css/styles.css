@@ -32,14 +32,11 @@ body {
 .site-nav {
   position: fixed;
   z-index: 1000;
-  top: 0.75rem;
-  left: 0.75rem;
-  right: 0.75rem;
   min-height: 3.5rem;
-  background-color: rgba(10, 10, 10, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 999px;
+  background-color: var(--forest-green);
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,7 +47,7 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: var(--clay);
+  color: var(--cream);
   font-size: 0.88rem;
   font-weight: 500;
   letter-spacing: -0.01em;
@@ -67,7 +64,6 @@ body {
   justify-content: center;
   width: 36px;
   height: 36px;
-  border: 1px solid rgba(74, 79, 72, 0.3);
   border-radius: 100%;
   margin-right: 0.5rem;
 }
@@ -80,7 +76,7 @@ body {
 .nav-links a {
   text-decoration: none;
   display: none;
-  color: var(--clay);
+  color: var(--cream);
   margin-left: 1rem;
   font-weight: bold;
 }
@@ -99,7 +95,7 @@ body {
 
 .menu-toggle:hover,
 .menu-toggle:focus-visible {
-  background: rgba(85, 112, 90, 0.12);
+  color: var(--clay);
 }
 
 .menu-toggle span {
@@ -107,7 +103,7 @@ body {
   width: 20px;
   height: 3px;
   border-radius: 2px;
-  background: var(--clay);
+  background: var(--cream);
 }
 
 main {
@@ -405,14 +401,14 @@ h1 em {
 }
 
 .product-card p {
-  color: #6e7d70;
+  color: var(--cream);
   font-size: 13px;
   line-height: 1.6;
   margin: 0;
 }
 
 .product-price {
-  color: var(--sage-green);
+  color: var(--cream);
   font-size: 0.7rem;
   font-weight: 700;
 }
@@ -425,7 +421,7 @@ h1 em {
   padding: 0.85rem 1rem;
   border-radius: 999px;
   background: var(--sage-green);
-  color: var(--forest-green);
+  color: var(--cream);
   font-size: 0.82rem;
   border: none;
   margin-top: 0.75rem;
@@ -1052,11 +1048,10 @@ h1 em {
 
 @media (min-width: 768px) {
   .site-nav {
-    top: 1.25rem;
-    left: 1.5rem;
-    right: 1.5rem;
+    top: 0;
+    left: 0;
+    right: 0;
     min-height: 4rem;
-    border-radius: 1.25rem;
     padding: 0.65rem 1.25rem;
   }
 
@@ -1066,9 +1061,9 @@ h1 em {
 
   .nav-links a {
     display: inline-block;
-    color: var(--clay);
-    font-size: 0.85rem;
-    font-weight: 700;
+    color: var(--cream);
+    font-size: 0.95rem;
+    font-weight: 500;
     margin-left: 1.5rem;
     text-decoration: none;
   }
