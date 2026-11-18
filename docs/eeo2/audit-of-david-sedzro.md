@@ -1,4 +1,3 @@
-
 # Accessibility audit: Ama's Plant Corner site by David Sedzro
 
 - **Site audited:** [Ama's Plant Corner](https://david-sedzro.github.io/the-plant-corner/).
@@ -11,13 +10,14 @@
 - **Automated tools:** Google Lighthouse (Accessibility Audit). WAVE testing should be recorded once completed.
 - **Keyboard:** Manual keyboard navigation using the Tab key to examine navigation links and hero section buttons, including their visible focus states.
 - **Zoom, text size and reflow:** Browser zoom testing at 400%. Responsive layout inspection at viewport widths of 375px and below.
-- **Screen reader:** Microsoft Edge Read Aloud tool. 
+- **Screen reader:** Microsoft Edge Read Aloud tool.
 - **Pages and journeys covered:**
   - Homepage – Navigation bar.
   - Homepage – Hero section.
   - Shop page – Plants and Accessories.
   - Product details page.
   - Navigation menu toggle.
+  - Contact Us page – Contact form.
 
 ## Summary
 
@@ -25,15 +25,24 @@ The accessibility assessment produced positive results during automated desktop 
 
 However, mobile testing using Google Lighthouse identified one accessibility issue, resulting in a score of 96%.
 
-In addition to the automated findings, manual testing identified potential accessibility barriers involving keyboard focus visibility, navigation behaviour at 400% zoom and button border contrast. These issues demonstrate that a high automated accessibility score does not necessarily mean that a website is fully accessible.
+In addition to the automated findings, manual testing identified potential accessibility barriers involving keyboard focus visibility, navigation behaviour at 400% zoom, button border contrast and form field identification. These issues demonstrate that a high automated accessibility score does not necessarily mean that a website is fully accessible.
 
-![screenshots of proof of accessibility testing with wave and lighthouse](../audit-image-references/lighthouse-check-desktop.png) 
-![screenshots of proof of accessibility testing with wave and lighthouse](../audit-image-references/wave-check.png) 
+![screenshots of proof of accessibility testing with wave and lighthouse](../audit-image-references/lighthouse-check-desktop.png)
+![screenshots of proof of accessibility testing with wave and lighthouse](../audit-image-references/wave-check.png)
 
 The findings below are arranged according to their potential impact on users and the importance of addressing them.
 
-
 ## Findings, in priority order
+
+| Finding                                                                 | Ranking | Severity         |
+| ----------------------------------------------------------------------- | ------: | ---------------- |
+| Navigation link has no visible keyboard focus indicator                 |       1 | High             |
+| Navigation menu clips the last navigation link at 400% zoom             |       2 | High             |
+| Hero section buttons have poorly visible keyboard focus indicators      |       3 | High             |
+| Contact Us form does not identify required fields before submission     |       4 | Medium–High      |
+| Navigation menu toggle uses prohibited ARIA attributes                  |       5 | Medium–High      |
+| Insufficient contrast on the "Back to Catalogue" button border          |       6 | Medium           |
+| Shop page layout requires further investigation at smaller screen sizes |       7 | To be determined |
 
 ### 1. Navigation link has no visible keyboard focus indicator
 
@@ -48,7 +57,7 @@ The findings below are arranged according to their potential impact on users and
   4. Observe the appearance of the Contact button.
   5. Notice that there is no clearly distinguishable visual change indicating that the button is focused.
 - **Evidence:**
-    ![Screenshot of button in focus state on navbar](../audit-image-references/navbar-screenshot.png)
+  ![Screenshot of button in focus state on navbar](../audit-image-references/navbar-screenshot.png)
 - **Principle and criterion:** Operable; WCAG 2.4.7 – Focus Visible (Level AA).
 - **Who it affects and how:** Keyboard-only users and people with motor disabilities who rely on keyboard navigation may have difficulty identifying their current position within the navigation menu. This can make navigating the website confusing and less predictable.
 - **Found by:** Manual keyboard testing.
@@ -69,7 +78,8 @@ The findings below are arranged according to their potential impact on users and
 - **Evidence:**
 
   Screenshot showing the navigation dropdown at 400% zoom and the clipped navigation link.
-![Navbar with clipped link](../audit-image-references/navbar-with-clipped-link.png)
+  ![Navbar with clipped link](../audit-image-references/navbar-with-clipped-link.png)
+
 - **Principle and criterion:** Perceivable; WCAG 1.4.10 - Reflow (Level AA).
 - **Who it affects and how:** People with low vision who increase browser zoom to make website content larger may be unable to view or access all navigation links. This can prevent them from reaching important sections of the website.
 - **Found by:** Manual browser zoom testing.
@@ -92,12 +102,36 @@ The findings below are arranged according to their potential impact on users and
   Screenshot showing the CTA button's focus indicator against the hero background.
 
   ![screenshot showing hero buttons cta error](../audit-image-references/hero-cta-buttons.png)
+
 - **Principle and criterion:** Operable; WCAG 2.4.7 – Focus Visible (Level AA). Perceivable; WCAG 1.4.11 – Non-text Contrast (Level AA), where the focus indicator fails the required contrast threshold.
 - **Who it affects and how:** Keyboard-only users and people with low vision may struggle to identify which CTA button currently has keyboard focus. This makes it more difficult to interact with important actions on the homepage.
 - **Found by:** Manual keyboard testing.
 - **Why it ranks here:** This is a high-priority issue because the hero section contains important calls to action. If users cannot clearly identify which button has focus, they may struggle to interact with these controls.
 
-### 4. Navigation menu toggle uses prohibited ARIA attributes
+### 4. Contact Us form does not identify required fields before submission
+
+**Priority: Medium–High**
+
+- **Where:** Contact Us page – Contact form.
+- **What happens:** The contact form does not clearly identify which fields are required before users attempt to submit it. As a result, users may not know which information they must provide to complete the form successfully. They may only discover that certain fields are mandatory after attempting to submit the form.
+- **How to reproduce:**
+  1. Open the website homepage.
+  2. Navigate to the Contact Us page.
+  3. Locate the contact form.
+  4. Inspect the form fields before entering any information.
+  5. Observe whether required fields are visually identified or accompanied by instructions.
+  6. Attempt to submit the form without completing the required fields.
+  7. Observe whether the website only communicates the required fields after submission.
+- **Evidence:**
+
+  Screenshot showing the Contact Us form and the required fields that are not identified before submission.
+
+- **Principle and criterion:** Understandable; WCAG 3.3.2 – Labels or Instructions (Level A). WCAG 3.3.1 – Error Identification (Level A) may also be relevant if submission errors are not properly identified.
+- **Who it affects and how:** People with cognitive disabilities, learning difficulties and users who rely on assistive technologies may have difficulty understanding which information is mandatory. This can lead to confusion, unnecessary submission attempts and difficulty completing the contact form.
+- **Found by:** Manual form inspection and submission testing.
+- **Why it ranks here:** This is a medium–high priority issue because unclear form requirements can make it difficult for users to complete an important website interaction. Identifying required fields before submission helps users understand what information is expected and reduces avoidable errors.
+
+### 5. Navigation menu toggle uses prohibited ARIA attributes
 
 **Priority: Medium–High**
 
@@ -115,12 +149,13 @@ The findings below are arranged according to their potential impact on users and
   Screenshot of the Lighthouse accessibility warning showing the failing element.
 
   ![Screenshot of the Lighthouse accessibility warning showing the failing element.](../audit-image-references/lighthouse-mobile-warning.png)
+
 - **Principle and criterion:** Robust; WCAG 4.1.2 – Name, Role, Value (Level A), if the incorrect ARIA usage prevents the control's name, role or state from being correctly exposed to assistive technologies.
 - **Who it affects and how:** People who use screen readers and other assistive technologies may not receive accurate information about the menu toggle's role or purpose. This can make it difficult to understand and interact with the website's navigation menu.
 - **Found by:** Google Lighthouse – Accessibility Audit.
-- **Why it ranks here:** This issue may affect how assistive technologies interpret an important navigation control. It is ranked below the directly observed keyboard focus and zoom issues because the precise ARIA attribute and its effect on the accessibility tree still need to be confirmed through HTML inspection and screen reader testing.
+- **Why it ranks here:** This issue may affect how assistive technologies interpret an important navigation control. It is ranked below the directly observed keyboard focus, zoom and form issues because the precise ARIA attribute and its effect on the accessibility tree still need to be confirmed through HTML inspection and screen reader testing.
 
-### 5. Insufficient contrast on the "Back to Catalogue" button border.
+### 6. Insufficient contrast on the "Back to Catalogue" button border
 
 **Priority: Medium**
 
@@ -138,12 +173,13 @@ The findings below are arranged according to their potential impact on users and
   Screenshot showing the Back to Catalogue button and its surrounding background.
 
   ![screenshot showing button with border colour](../audit-image-references/product-details.png)
+
 - **Principle and criterion:** Perceivable; WCAG 1.4.11 – Non-text Contrast (Level AA).
 - **Who it affects and how:** People with low vision or visual impairments may have difficulty distinguishing the button from its background. This can make the button's boundaries and interactive nature less apparent.
 - **Found by:** Manual visual inspection.
 - **Why it ranks here:** This is a medium-priority issue because it affects the visibility of an interactive component. However, its impact is more limited than issues that prevent users from navigating the website or accessing important content. The actual contrast ratio should be measured to confirm the failure against the WCAG 1.4.11 requirement.
 
-### 6. Shop page layout requires further investigation at smaller screen sizes
+### 7. Shop page layout requires further investigation at smaller screen sizes
 
 **Priority: To be determined**
 
@@ -162,6 +198,7 @@ The findings below are arranged according to their potential impact on users and
   Screenshot of the Shop page at 375px or below.
 
   ![shop page on mobile screen](../audit-image-references/layout-break.png)
+
 - **Principle and criterion:** Perceivable; WCAG 1.4.10 – Reflow (Level AA), if the inspection confirms that content is clipped, requires two-dimensional scrolling where it should reflow, or becomes unavailable.
 - **Who it affects and how:** Mobile users and people with low vision who use screen magnification may experience difficulty accessing content if the layout does not adapt properly to smaller screen sizes.
 - **Found by:** Manual responsive viewport testing using browser Developer Tools.
@@ -178,10 +215,9 @@ The following areas have not yet been sufficiently tested to confirm whether the
 - Keyboard accessibility of interactive elements beyond the issues documented above.
 - Text colour contrast throughout the website.
 
-
 ## Not tested, and limits of this audit
 
 - **Screen reader testing:** Microsoft Edge's Read Aloud feature was used to assess how the website's textual content is presented through audio, helping to determine whether information such as plant care guides and other content could be easily followed when read aloud. However, Read Aloud is a text-to-speech feature rather than a fully featured screen reader. It does not provide the same level of interaction, keyboard navigation or accessibility announcements as dedicated screen readers such as NVDA or JAWS. Therefore, this test does not constitute a complete screen-reader accessibility assessment.
 - **Automated testing limitations:** Lighthouse identifies potential accessibility problems but cannot detect every accessibility issue. Manual testing is necessary to establish the actual impact on users.
 
-**Overall recommendation:** The website should prioritise fixing the keyboard focus visibility and navigation reflow issues, followed by reviewing the navigation menu's ARIA implementation. Further manual testing should be carried out to identify any additional accessibility barriers.
+**Overall recommendation:** The website should prioritise fixing the keyboard focus visibility and navigation reflow issues, followed by improving the identification of required contact form fields and reviewing the navigation menu's ARIA implementation. Further manual testing should be carried out to identify any additional accessibility barriers.
