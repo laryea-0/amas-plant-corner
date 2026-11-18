@@ -45,7 +45,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  padding: 0.45rem 0.5rem 0.45rem 0.7rem;
+  padding: 0.5rem 0;
 }
 
 .site-nav-content {
@@ -53,6 +53,7 @@ body {
   max-width: var(--page-max-width);
   min-height: 2.6rem;
   margin-inline: auto;
+  padding-inline: 1.25rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1083,9 +1084,10 @@ h1 em {
     padding: 0.65rem 0;
   }
 
-  .site-nav-content {
-    padding-inline: 1.25rem;
-    max-width: 75rem;
+  .site-nav-content,
+  .page-container,
+  .footer-content {
+    padding-inline: 6vw;
   }
 
   .logo {
@@ -1112,11 +1114,6 @@ h1 em {
 
   .hero-content {
     padding: 9rem 6vw 6rem;
-  }
-
-  .page-container,
-  .footer-content {
-    padding-inline: 6vw;
   }
 
   .shop-section {
