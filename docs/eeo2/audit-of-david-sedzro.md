@@ -48,7 +48,7 @@ The findings below are arranged according to their potential impact on users and
   4. Observe the appearance of the Contact button.
   5. Notice that there is no clearly distinguishable visual change indicating that the button is focused.
 - **Evidence:**
-    ![Screenshot of button in focus state on navbar](docs/audit-image-references/navbar-screenshot.png)
+    ![Screenshot of button in focus state on navbar](../audit-image-references/navbar-screenshot.png)
 - **Principle and criterion:** Operable; WCAG 2.4.7 – Focus Visible (Level AA).
 - **Who it affects and how:** Keyboard-only users and people with motor disabilities who rely on keyboard navigation may have difficulty identifying their current position within the navigation menu. This can make navigating the website confusing and less predictable.
 - **Found by:** Manual keyboard testing.
