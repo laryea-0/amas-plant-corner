@@ -9,6 +9,13 @@ The complete supporting write-ups are available in the [markdown folder](markdow
 [Design Decisions](markdown/Decisions.md), [Redesign Audit](markdown/audit.md),
 and [Additional Improvement](markdown/improvement.md).
 
+## Stylesheets
+
+`css/styles.css` is the stylesheet entry point. Shared colour, typography, and
+layout tokens and global styles live in `css/design-system.css`. Page-area
+stylesheets keep each section's responsive rules alongside its base styles;
+shop products are grouped in `css/products.css`.
+
 ## 1. Site layout sketch
 
 The sketch below captures the original mobile-first page structure. The
