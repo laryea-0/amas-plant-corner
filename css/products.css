@@ -10,8 +10,8 @@
 
 .product-card {
   width: 100%;
-  padding: 10px;
-  border-radius: 26px;
+  padding: var(--space-3);
+  border-radius: var(--radius-card);
   background: var(--color-card-overlay);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -24,10 +24,10 @@
 }
 
 .product-thumb {
-  height: 250px;
+  height: 15.625rem;
   position: relative;
   overflow: hidden;
-  border-radius: 19px;
+  border-radius: var(--radius-card);
 }
 
 .product-thumb img {
@@ -98,7 +98,6 @@
 
 @media (min-width: 768px) {
   .product-card {
-    grid-template-columns: 7rem 1fr;
     min-height: 8.75rem;
   }
 }
