@@ -114,10 +114,15 @@ h1 em {
   clip-path: polygon(10% 0, 100% 0, 100% 100%, 0 100%);
 }
 
-.hero-btn:hover,
-.hero-btn:focus-visible {
+.hero-btn:hover {
   background: var(--color-leaf-pale);
   transform: translateY(-2px);
+}
+
+.hero-btn:focus-visible {
+  transform: translateY(-2px);
+  background: var(--color-terracotta);
+  color: var(--color-cream);
 }
 
 .hero-btn span {

@@ -95,7 +95,6 @@
 .ask-button:hover,
 .ask-button:focus-visible {
   background-color: var(--color-terracotta);
-  outline: none;
 }
 .ask-button span {
   font-size: var(--text-lg);

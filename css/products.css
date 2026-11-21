@@ -89,7 +89,6 @@
   font-weight: 700;
   text-decoration: none;
   transition: all 180ms ease;
-  outline: none;
 }
 
 .product-card a:hover,
