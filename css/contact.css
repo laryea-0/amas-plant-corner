@@ -54,6 +54,7 @@
   border: 0;
   border-bottom: 1px solid var(--color-input-border);
   border-radius: 0;
+  outline: 0;
   background: transparent;
   color: var(--color-forest);
   font: inherit;
@@ -67,11 +68,9 @@
 .field-row textarea::placeholder {
   color: var(--color-placeholder);
 }
-.field-row input:focus-visible,
-.field-row select:focus-visible,
-.field-row textarea:focus-visible {
-  outline: 3px solid var(--color-forest-secondary);
-  outline-offset: 3px;
+.field-row input:focus,
+.field-row select:focus,
+.field-row textarea:focus {
   border-color: var(--color-forest-secondary);
   box-shadow: 0 1px 0 var(--color-forest-secondary);
 }

@@ -26,36 +26,41 @@
   gap: 1rem;
 }
 
-.about-ama .about-lede {
+.about-lede {
   max-width: 20rem;
   font-family: var(--font-serif);
-  font-size: var(--text-about-lede);
+  font-size: var(--text-about-lede) !important;
   letter-spacing: -0.04em;
-  line-height: 1.2;
+  line-height: 1.2 !important;
 }
 
 .about-display {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: var(--space-4);
+  position: relative;
+  min-height: 22rem;
   margin: 2rem -1.25rem 1rem;
 }
 
 .about-display h2 {
-  min-width: 0;
+  position: absolute;
+  z-index: 0;
+  top: 1.5rem;
+  left: 5%;
+  width: 100%;
   color: var(--color-terracotta);
   font-size: var(--text-display-about-mobile);
   font-weight: 800;
-  letter-spacing: -0.06em;
-  line-height: 0.9;
+  letter-spacing: -0.1em;
+  line-height: 0.72;
   text-align: left;
   text-transform: lowercase;
 }
 
 .about-portrait {
-  position: relative;
-  justify-self: end;
-  width: min(12rem, 72vw);
+  position: absolute;
+  z-index: 1;
+  right: 12%;
+  bottom: 0;
+  width: 12rem;
   height: 16rem;
 }
 
@@ -123,7 +128,6 @@
   }
 
   .about-display {
-    align-items: center;
     grid-column: 2;
     grid-row: 1 / span 2;
     min-height: 34rem;
@@ -131,12 +135,13 @@
   }
 
   .about-display h2 {
-    font-size: clamp(3rem, 8vw, 8rem);
+    top: 3rem;
+    font-size: var(--text-display-about-wide);
     text-align: left;
   }
 
   .about-portrait {
-    justify-self: center;
+    right: 12%;
     width: 17rem;
     height: 24rem;
   }
