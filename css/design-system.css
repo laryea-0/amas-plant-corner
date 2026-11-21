@@ -137,8 +137,80 @@ main {
   display: block;
 }
 
-/* @media (min-width: 768px) {
-  .page-container {
-    padding-inline: 2vw;
-  }
-} */
+body:has(#high-contrast-toggle:checked) {
+  --color-background: #000;
+  --color-forest: #000;
+  --color-forest-secondary: #fff;
+  --color-sage: #ff0;
+  --color-terracotta: #ff0;
+  --color-clay: #ff0;
+  --color-ink: #fff;
+  --color-cream: #fff;
+  --color-white: #fff;
+  --color-paper: #000;
+  --color-paper-light: #000;
+  --color-charcoal: #000;
+  --color-leaf-pale: #000;
+  --color-leaf-light: #ff0;
+  --color-leaf-cream: #fff;
+  --color-leaf-soft: #ff0;
+  --color-bright-leaf: #ff0;
+  --color-sage-light: #ff0;
+  --color-forest-soft: #fff;
+  --color-sage-text: #fff;
+  --color-muted-text: #fff;
+  --color-muted-green: #fff;
+  --color-footer-muted: #fff;
+  --color-footer-link: #fff;
+  --color-placeholder: #fff;
+  --color-hero-overlay: #000;
+  --color-card-overlay: #000;
+  --color-card-content-overlay: #000;
+  --color-leaf-border: rgba(255, 255, 255, 0.8);
+  --color-wordmark-overlay: rgba(255, 255, 255, 0.15);
+  --color-footer-border: #fff;
+  --color-footer-input-border: #fff;
+  --color-white-muted: #fff;
+  --color-white-soft: #fff;
+  --color-rule: #fff;
+  --color-input-border: #fff;
+  --color-icon-border: #fff;
+}
+
+body:has(#high-contrast-toggle:checked) .about-section,
+body:has(#high-contrast-toggle:checked) .care-section,
+body:has(#high-contrast-toggle:checked) .connect-section {
+  color: #fff;
+}
+
+body:has(#high-contrast-toggle:checked) .about-link,
+body:has(#high-contrast-toggle:checked) .care-tip .tip-title,
+body:has(#high-contrast-toggle:checked) .tip-icon,
+body:has(#high-contrast-toggle:checked) .care-link,
+body:has(#high-contrast-toggle:checked) .form-instructions,
+body:has(#high-contrast-toggle:checked) .field-row label,
+body:has(#high-contrast-toggle:checked) .field-row input,
+body:has(#high-contrast-toggle:checked) .field-row select,
+body:has(#high-contrast-toggle:checked) .field-row textarea {
+  color: #fff;
+}
+
+body:has(#high-contrast-toggle:checked) .field-row select,
+body:has(#high-contrast-toggle:checked) .field-row select option {
+  background-color: #000;
+}
+
+body:has(#high-contrast-toggle:checked) .hero-btn:hover,
+body:has(#high-contrast-toggle:checked) .hero-btn:focus-visible,
+body:has(#high-contrast-toggle:checked) .ask-button:hover,
+body:has(#high-contrast-toggle:checked) .ask-button:focus-visible {
+  background: #ff0;
+  color: #000;
+}
+
+body:has(#high-contrast-toggle:checked) .ask-button,
+body:has(#high-contrast-toggle:checked) .product-card,
+body:has(#high-contrast-toggle:checked) .product-card-content,
+body:has(#high-contrast-toggle:checked) .contact-card {
+  border: 2px solid #fff;
+}

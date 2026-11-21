@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <a class="skip-link" href="#plants">Skip to main content</a>
     <header>
       <!-- navbar  -->
       <nav class="site-nav" aria-label="Main navigation">
@@ -39,26 +39,50 @@
           <span>Ama's Plant Corner</span>
         </a>
 
+        <div class="nav-actions">
+          <label class="theme-toggle contrast-toggle" title="Toggle high contrast">
+            <input
+              id="high-contrast-toggle"
+              type="checkbox"
+              aria-label="Toggle high contrast"
+            />
+            <svg
+              class="theme-toggle-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 3a9 9 0 0 0 0 18Z" />
+            </svg>
+          </label>
+          <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="primary-navigation"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
         <div class="nav-links" id="primary-navigation">
           <a href="#plants">Plants</a>
           <a href="#care">Care tips</a>
           <a href="#visit">Visit us</a>
         </div>
-
-        <!-- humberger menu -->
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-label="Open menu"
-          aria-expanded="false"
-          aria-controls="primary-navigation"
-        >
-          <span></span>
-          <!-- <span></span> -->
-          <span></span>
-        </button>
         </div>
       </nav>
+      <button
+        class="nav-backdrop"
+        type="button"
+        aria-label="Close navigation"
+        hidden
+      ></button>
     </header>
 
     <!-- main body container with various sections-->
