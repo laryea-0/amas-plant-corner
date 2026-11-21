@@ -1,0 +1,198 @@
+.connect-section {
+  padding-block: 4.5rem 5rem;
+  background: var(--color-paper-light);
+  color: var(--color-forest);
+}
+.connect-intro {
+  max-width: 29rem;
+}
+.connect-intro .eyebrow {
+  margin-bottom: 0.9rem;
+  color: var(--color-clay);
+}
+.connect-intro h2 {
+  font-family: var(--font-serif);
+  font-size: var(--text-display-contact);
+  font-weight: 400;
+  letter-spacing: -0.08em;
+  line-height: 0.85;
+}
+.connect-intro > p:last-child {
+  max-width: 25rem;
+  margin-top: 1rem;
+  color: var(--color-muted-text);
+  font-size: var(--text-body-large);
+  line-height: 1.6;
+}
+.connect-layout {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.ask-form {
+  display: grid;
+  gap: 1.25rem;
+}
+.form-instructions {
+  color: var(--color-forest);
+  font-size: var(--text-sm);
+}
+.field-row {
+  display: grid;
+  gap: 0.45rem;
+}
+.field-row label {
+  color: var(--color-forest);
+  font-size: var(--text-label);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+.field-row input,
+.field-row select,
+.field-row textarea {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--color-input-border);
+  border-radius: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--color-forest);
+  font: inherit;
+  font-size: var(--text-body);
+  padding: 0.55rem 0;
+}
+.field-row textarea {
+  resize: vertical;
+}
+.field-row input::placeholder,
+.field-row textarea::placeholder {
+  color: var(--color-placeholder);
+}
+.field-row input:focus,
+.field-row select:focus,
+.field-row textarea:focus {
+  border-color: var(--color-forest-secondary);
+  box-shadow: 0 1px 0 var(--color-forest-secondary);
+}
+.ask-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 0.25rem;
+  padding: 0.95rem 1.1rem;
+  border: 0;
+  border-radius: var(--radius-pill);
+  background: var(--color-forest);
+  color: var(--color-cream);
+  cursor: pointer;
+  font: inherit;
+  font-size: var(--text-sm-strong);
+  font-weight: 700;
+  transition: all 200ms ease-in-out;
+  min-height: var(--target-min-size);
+}
+.ask-button:hover,
+.ask-button:focus-visible {
+  background-color: var(--color-terracotta);
+  outline: none;
+}
+.ask-button span {
+  font-size: var(--text-lg);
+}
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  padding: 1.5rem;
+  border-radius: var(--radius-card);
+  background: var(--color-forest);
+  color: var(--color-cream);
+}
+.contact-card::after {
+  position: absolute;
+  right: -3rem;
+  bottom: -5rem;
+  width: 12rem;
+  height: 12rem;
+  border: 1px solid var(--color-leaf-border);
+  border-radius: 50%;
+  content: "";
+}
+.contact-card .eyebrow {
+  margin-bottom: 0.9rem;
+  color: var(--color-leaf-soft);
+}
+.contact-card h3 {
+  color: var(--color-cream);
+  font-family: var(--font-serif);
+  font-size: var(--text-heading);
+  font-weight: 400;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+.contact-card address {
+  display: grid;
+  gap: 0.25rem;
+  margin-top: 2.5rem;
+  color: var(--color-forest-soft);
+  font-size: var(--text-sm-reading-large);
+  font-style: normal;
+  line-height: 1.5;
+}
+.contact-card address strong {
+  color: var(--color-cream);
+}
+.contact-hours {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-leaf-border);
+}
+.contact-hours p {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--color-forest-soft);
+  font-size: var(--text-sm);
+}
+.contact-hours strong {
+  color: var(--color-cream);
+}
+.contact-links {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--target-min-size);
+  padding-block: var(--space-2);
+  color: var(--color-bright-leaf);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-underline-offset: 0.25rem;
+}
+.contact-links a:hover,
+.contact-links a:focus-visible {
+  color: var(--color-leaf-pale);
+}
+
+@media (min-width: 768px) {
+  .connect-section {
+    padding-block: 8rem;
+  }
+  .connect-layout {
+    grid-template-columns: minmax(20rem, 1fr) minmax(17rem, 0.75fr);
+    align-items: start;
+    gap: 8vw;
+    margin-top: 4rem;
+  }
+  .contact-card {
+    margin-top: -3rem;
+    padding: 2rem;
+  }
+}

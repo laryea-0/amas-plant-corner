@@ -1,0 +1,154 @@
+.about-section {
+  position: relative;
+  overflow: hidden;
+  padding-block: 4.5rem 5rem;
+  background: var(--color-paper);
+  color: var(--color-forest);
+}
+
+.about-content {
+  position: relative;
+}
+
+.about-ama {
+  position: relative;
+  z-index: 2;
+  max-width: 32rem;
+}
+
+.about-ama p {
+  font-size: var(--text-body-large);
+  line-height: 1.65;
+}
+
+.about-ama--top {
+  display: grid;
+  gap: 1rem;
+}
+
+.about-lede {
+  max-width: 20rem;
+  font-family: var(--font-serif);
+  font-size: var(--text-about-lede) !important;
+  letter-spacing: -0.04em;
+  line-height: 1.2 !important;
+}
+
+.about-display {
+  position: relative;
+  min-height: 22rem;
+  margin: 2rem -1.25rem 1rem;
+}
+
+.about-display h2 {
+  position: absolute;
+  z-index: 0;
+  top: 1.5rem;
+  left: 5%;
+  width: 100%;
+  color: var(--color-terracotta);
+  font-size: var(--text-display-about-mobile);
+  font-weight: 800;
+  letter-spacing: -0.1em;
+  line-height: 0.72;
+  text-align: left;
+  text-transform: lowercase;
+}
+
+.about-portrait {
+  position: absolute;
+  z-index: 1;
+  right: 12%;
+  bottom: 0;
+  width: 12rem;
+  height: 16rem;
+}
+
+.about-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.portrait-note {
+  position: absolute;
+  right: -0.8rem;
+  bottom: 1rem;
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.35rem;
+  background: var(--color-forest);
+  color: var(--color-cream);
+  font-size: var(--text-2xs);
+  font-weight: 700;
+  line-height: 1.3;
+  transform: rotate(5deg);
+}
+
+.about-ama--bottom {
+  max-width: 22rem;
+  margin-left: auto;
+}
+
+.about-ama--bottom strong {
+  color: var(--color-clay);
+}
+
+.about-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-top: 1.25rem;
+  color: var(--color-forest);
+  font-size: var(--text-sm-strong);
+  font-weight: 700;
+  min-height: var(--target-min-size);
+  padding-block: var(--space-2);
+  text-underline-offset: 0.25rem;
+}
+
+.about-link span {
+  font-size: var(--text-base);
+}
+
+@media (min-width: 768px) {
+  .about-section {
+    padding-block: 8rem;
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: minmax(12rem, 0.8fr) minmax(24rem, 1.2fr);
+    column-gap: 5vw;
+  }
+
+  .about-ama--top {
+    align-self: start;
+    padding-top: 1rem;
+  }
+
+  .about-display {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    min-height: 34rem;
+    margin: -1rem 0 0;
+  }
+
+  .about-display h2 {
+    top: 3rem;
+    font-size: var(--text-display-about-wide);
+    text-align: left;
+  }
+
+  .about-portrait {
+    right: 12%;
+    width: 17rem;
+    height: 24rem;
+  }
+
+  .about-ama--bottom {
+    grid-column: 1;
+    align-self: end;
+    margin-top: 5rem;
+  }
+}
