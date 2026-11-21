@@ -164,9 +164,6 @@
 }
 
 @media (min-width: 768px) {
-  /* .footer-content {
-    padding-inline: 6vw;
-  } */
   .site-footer {
     padding-block: 5rem 0;
   }
