@@ -120,6 +120,12 @@
   font-size: var(--text-base);
 }
 
+.care-link:hover,
+.care-link:focus-visible {
+  color: var(--color-clay);
+  text-decoration-thickness: 2px;
+}
+
 @media (min-width: 768px) {
   .care-section {
     padding-block: 8rem;

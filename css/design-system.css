@@ -126,6 +126,11 @@ body {
   outline-offset: 3px;
 }
 
+a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 4px;
+}
+
 .page-container {
   width: 100%;
   max-width: var(--layout-max-width);
@@ -191,8 +196,14 @@ body:has(#high-contrast-toggle:checked) .form-instructions,
 body:has(#high-contrast-toggle:checked) .field-row label,
 body:has(#high-contrast-toggle:checked) .field-row input,
 body:has(#high-contrast-toggle:checked) .field-row select,
+body:has(#high-contrast-toggle:checked) .field-row select option,
 body:has(#high-contrast-toggle:checked) .field-row textarea {
   color: #fff;
+}
+
+body:has(#high-contrast-toggle:checked) .about-link:hover,
+body:has(#high-contrast-toggle:checked) .care-link:hover {
+  color: var(--color-bright-leaf);
 }
 
 body:has(#high-contrast-toggle:checked) .field-row select,

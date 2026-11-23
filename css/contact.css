@@ -74,6 +74,32 @@
   border-color: var(--color-forest-secondary);
   box-shadow: 0 1px 0 var(--color-forest-secondary);
 }
+
+.field-row input:focus-visible,
+.field-row select:focus-visible,
+.field-row textarea:focus-visible {
+  outline: 3px solid var(--color-forest-secondary);
+  outline-offset: 3px;
+}
+
+body:has(#high-contrast-toggle:checked) .field-row input,
+body:has(#high-contrast-toggle:checked) .field-row select,
+body:has(#high-contrast-toggle:checked) .field-row textarea {
+  border-bottom-color: var(--color-bright-leaf);
+}
+
+body:has(#high-contrast-toggle:checked) .field-row input:focus,
+body:has(#high-contrast-toggle:checked) .field-row select:focus,
+body:has(#high-contrast-toggle:checked) .field-row textarea:focus {
+  box-shadow: 0 1px 0 var(--color-bright-leaf);
+}
+
+body:has(#high-contrast-toggle:checked) .field-row input:focus-visible,
+body:has(#high-contrast-toggle:checked) .field-row select:focus-visible,
+body:has(#high-contrast-toggle:checked) .field-row textarea:focus-visible {
+  outline-color: var(--color-bright-leaf);
+}
+
 .ask-button {
   display: inline-flex;
   align-items: center;
@@ -177,7 +203,7 @@
 }
 .contact-links a:hover,
 .contact-links a:focus-visible {
-  color: var(--color-leaf-pale);
+  color: var(--color-cream);
 }
 
 @media (min-width: 768px) {
