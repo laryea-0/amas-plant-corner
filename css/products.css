@@ -23,6 +23,12 @@
   transform: translateY(-7px);
 }
 
+.product-card:focus-visible {
+  outline: 3px solid var(--color-bright-leaf);
+  outline-offset: 3px;
+  transform: translateY(-7px);
+}
+
 .product-thumb {
   height: 250px;
   position: relative;

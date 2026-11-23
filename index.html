@@ -148,7 +148,12 @@
         <!-- the product cards grid -->
         <div class="product-grid">
           <!--  product card for houseplants -->
-          <article class="product-card">
+          <article
+            class="product-card"
+            tabindex="0"
+            aria-labelledby="houseplants-heading"
+            aria-describedby="houseplants-price houseplants-description"
+          >
             <div class="product-thumb">
               <img
                 src="assets/images/indoorplants.jpg"
@@ -158,16 +163,21 @@
             </div>
             <div class="product-card-content">
               <div>
-                <h3>Houseplants</h3>
-                <span class="product-price">From GH₵25</span>
+                <h3 id="houseplants-heading">Houseplants</h3>
+                <span class="product-price" id="houseplants-price">From GH₵25</span>
               </div>
-              <p>Easy-going greens for every room.</p>
+              <p id="houseplants-description">Easy-going greens for every room.</p>
               <!-- <a href="#plants">View houseplants</a> -->
             </div>
           </article>
 
           <!-- product card for pots and planters -->
-          <article class="product-card">
+          <article
+            class="product-card"
+            tabindex="0"
+            aria-labelledby="pots-heading"
+            aria-describedby="pots-price pots-description"
+          >
             <div class="product-thumb">
               <img
                 src="assets/images/pots.jpg"
@@ -177,16 +187,21 @@
             </div>
             <div class="product-card-content">
               <div>
-                <h3>Pots &amp; planters</h3>
-                <span class="product-price">From GH₵15</span>
+                <h3 id="pots-heading">Pots &amp; planters</h3>
+                <span class="product-price" id="pots-price">From GH₵15</span>
               </div>
-              <p>Simple homes for happy roots.</p>
+              <p id="pots-description">Simple homes for happy roots.</p>
               <!-- <a href="#plants">View pots</a> -->
             </div>
           </article>
 
           <!-- product card for soil and supplies -->
-          <article class="product-card">
+          <article
+            class="product-card"
+            tabindex="0"
+            aria-labelledby="supplies-heading"
+            aria-describedby="supplies-price supplies-description"
+          >
             <div class="product-thumb">
               <img
                 src="assets/images/soil and tools.jpg"
@@ -196,10 +211,10 @@
             </div>
             <div class="product-card-content">
               <div>
-                <h3>Soil &amp; supplies</h3>
-                <span class="product-price">From GH₵10</span>
+                <h3 id="supplies-heading">Soil &amp; supplies</h3>
+                <span class="product-price" id="supplies-price">From GH₵10</span>
               </div>
-              <p>Fresh mixes for strong beginnings.</p>
+              <p id="supplies-description">Fresh mixes for strong beginnings.</p>
               <!-- <a href="#plants">View soil supplies</a> -->
             </div>
           </article>
