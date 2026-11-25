@@ -100,7 +100,7 @@
   font-size: var(--text-sm-strong);
   font-weight: 700;
 }
-.newsletter-form button:focus, button:hover{
+.newsletter-form button:focus,.newsletter-form button:hover{
   background-color: var(--color-cream);
 }
 .form-note {
